@@ -4,12 +4,12 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Amanda Stouder,
-         their colleagues and Vibha Alangar.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues, Vibha Alangar, and Stephen Payne.
+"""  # DONE PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 #
-# TODO: 2.
+# DONE
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -101,7 +101,7 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
 
 ###############################################################################
 #
-# TODO: 3.
+# DONE
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -138,10 +138,15 @@ def try_methods():
       -- backward  100 units
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function, per its doc-string above.
+    # DONE. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     ###########################################################################
-
+    turtle = rg.SimpleTurtle()
+    turtle.pen = rg.Pen('brown', 5)
+    turtle.forward(150)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.backward(100)
 
 def try_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
@@ -152,7 +157,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ###########################################################################
-    # TODO: 4. Implement and test this function, per its doc-string above.
+    # DONE. Implement and test this function, per its doc-string above.
     #   The testing code (in main) is already written for you.
     #
     #    NOTE: This function requires
@@ -161,7 +166,9 @@ def try_functions():
     #    HINT: see   jump_and_move_turtle   above.
     ###########################################################################
 
-
+    jump_and_move_turtle(200,100,300,30)
+    jump_and_move_turtle(100,200, 0,0)
+    jump_and_move_turtle(-50,50,100,100)
 def try_methods_and_functions():
     # IMPORTANT: Read the NOTE below before you try to solve this TO-DO!
     """
@@ -203,7 +210,22 @@ def try_methods_and_functions():
     #     draw_many_squares
     #   function defined above.  If you don't see why, ** ASK FOR HELP. **
     ###########################################################################
-
+    turtle = rg.SimpleTurtle()
+    turtle.pen = rg.Pen('blue', 5)
+    turtle.backward(150)
+    turtle.speed = 1
+    draw_many_squares(turtle,2, 100, 30)
+    turtle.speed = 5
+    turtle.pen.color = 'red'
+    draw_many_squares(turtle,10, 50, 15)
+    turtle.speed = 100
+    turtle.pen.thickness = 35
+    draw_many_squares(turtle,8, 100, 60)
+    turtle.pen = rg.Pen('black', 3)
+    turtle.backward(200)
+    turtle.draw_circle(30)
+    turtle.draw_square(50)
+    #draw_many_squares(my_turtle, number_of_squares, size, twist):
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
